@@ -7,9 +7,9 @@ const RootLayout = () => {
     console.log(user)
 
     return (
-        <div>
-            <h1>hissss</h1>
-        </div>
+        <main>
+            <h1 className="font-bold">hi</h1>
+        </main>
     );
 };
 
