@@ -14,6 +14,15 @@ const RootLayout = () => {
             <main className=" w-[77%] h-screen border border-amber-300">
                 <Outlet></Outlet>
             </main>
+
+            <div className="bg-themeSettingTabBg">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
         </div>
 
     );
