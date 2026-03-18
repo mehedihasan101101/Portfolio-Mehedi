@@ -14,7 +14,7 @@ const navFields: NavFields[] = [
 const Nav = () => {
 
     return (
-        <div className="w-[25%] h-screen border border-amber-300 flex flex-col items-center justify-center">
+        <div className="w-[23%] h-screen border border-amber-300 flex flex-col items-center justify-center">
             <h1 className="text-3xl font-extrabold"> TOKYO</h1>
             {navFields.map((eachField => <NavLink key={eachField.id} to={eachField.path}>{eachField.name}</NavLink>))}
         </div>

@@ -11,7 +11,7 @@ const RootLayout = () => {
     return (
         <div className="flex">
             <Nav></Nav>
-            <main className=" w-[75%] h-screen border border-amber-300">
+            <main className=" w-[77%] h-screen border border-amber-300">
                 <Outlet></Outlet>
             </main>
         </div>

@@ -6,6 +6,17 @@
 
 }
 
+:root {
+    --color-bodyBgColor: #767676;
+    --color-sideBarBgColor: #fff;
+    --color-primaryTextColor: #000;
+    --color-secondaryTextColor: #7f7f7f;
+}
+
 @theme {
-    --font-Montserrat: Montserrat, "sans-serif"
+    --font-Montserrat: Montserrat, "sans-serif";
+    --color-bodyBgColor: var(--color-bodyBgColor);
+    --color-sideBarBgColor: var(--color-sideBarBgColor);
+    --color-primaryTextColor: var(--color-primaryTextColor);
+    --color-secondaryTextColor: var(--color-secondaryTextColor)
 }
