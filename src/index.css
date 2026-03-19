@@ -6,19 +6,30 @@
 
 }
 
-:root {
-    --color-bodyBgColor: #f8f8f8;
-    --color-sideBarBgColor: #fff;
-    --color-primaryTextColor: #000;
-    --color-secondaryTextColor: #7f7f7f;
-    --color-themeSettingTabBg: #000;
-}
-
 @theme {
     --font-Montserrat: Montserrat, "sans-serif";
     --color-bodyBgColor: var(--color-bodyBgColor);
     --color-sideBarBgColor: var(--color-sideBarBgColor);
     --color-primaryTextColor: var(--color-primaryTextColor);
     --color-secondaryTextColor: var(--color-secondaryTextColor);
-    --color-themeSettingTabBg: var(--color-themeSettingTabBg)
+    --color-themeSettingTabBg: var(--color-themeSettingTabBg);
+    --color-textThemeController: var(--color-textThemeController)
+}
+
+[data-theme="lightMode"] {
+    --color-bodyBgColor: #f8f8f8;
+    --color-sideBarBgColor: #fff;
+    --color-primaryTextColor: #000;
+    --color-secondaryTextColor: #7f7f7f;
+    --color-themeSettingTabBg: #000;
+    --color-textThemeController: #fff;
+}
+
+[data-theme="darkMode"] {
+    --color-bodyBgColor: #000000;
+    --color-sideBarBgColor: #fff;
+    --color-primaryTextColor: #000;
+    --color-secondaryTextColor: #7f7f7f;
+    --color-themeSettingTabBg: #000;
+    --color-textThemeController: #fff;
 }
