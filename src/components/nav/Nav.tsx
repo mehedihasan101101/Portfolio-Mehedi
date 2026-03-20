@@ -14,11 +14,11 @@ type NavFields = {
 }
 const navFields: NavFields[] = [
     {
-        name: "Home", icon: FaHome, size: 21, id: 1, path: ""
+        name: "Home", icon: FaHome, size: 20.4, id: 1, path: ""
     },
-    { name: "About", icon: IoPersonSharp, size: 20.7, id: 2, path: "/about" },
-    { name: "Portfolio", icon: RiSuitcaseFill, size: 23, id: 3, path: "/portfolio" },
-    { name: "Contact", icon: IoIosMail, size: 25, id: 4, path: "/contact" },
+    { name: "About", icon: IoPersonSharp, size: 19.7, id: 2, path: "/about" },
+    { name: "Portfolio", icon: RiSuitcaseFill, size: 22, id: 3, path: "/portfolio" },
+    { name: "Contact", icon: IoIosMail, size: 24, id: 4, path: "/contact" },
 
 ]
 const Nav = () => {
@@ -26,7 +26,7 @@ const Nav = () => {
     return (
         <div className="lg:w-[23%] lg:h-screen h-18 lg:px-0 px-2.5 flex items-center justify-center  bg-sideBarBgColor">
             <div className="flex lg:flex-col lg:w-auto w-full lg:items-start items-center lg:justify-normal justify-between lg:space-y-12">
-                <h1 className=" lg:text-[32px] text-[25px]  font-extrabold">RyzerX</h1>
+                <h1 className=" lg:text-[32px] md:text-[25px] text-[22px]  font-extrabold">RyzerX</h1>
 
                 <div className="flex lg:flex-col lg:gap-y-2 gap-3 items-start justify-center">
                     {navFields.map((eachField) => {
