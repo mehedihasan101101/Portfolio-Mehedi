@@ -14,11 +14,11 @@ type NavFields = {
 }
 const navFields: NavFields[] = [
     {
-        name: "Home", icon: FaHome, size: 20.4, id: 1, path: ""
+        name: "Home", icon: FaHome, size: 20.5, id: 1, path: ""
     },
     { name: "About", icon: IoPersonSharp, size: 19.7, id: 2, path: "/about" },
-    { name: "Portfolio", icon: RiSuitcaseFill, size: 22, id: 3, path: "/portfolio" },
-    { name: "Contact", icon: IoIosMail, size: 24, id: 4, path: "/contact" },
+    { name: "Portfolio", icon: RiSuitcaseFill, size: 21.4, id: 3, path: "/portfolio" },
+    { name: "Contact", icon: IoIosMail, size: 23.7, id: 4, path: "/contact" },
 
 ]
 const Nav = () => {
