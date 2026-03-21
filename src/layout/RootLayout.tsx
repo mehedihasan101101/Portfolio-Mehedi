@@ -61,7 +61,7 @@ const RootLayout = () => {
                 <Outlet></Outlet>
             </main>
             {/* cursor Svg */}
-            <motion.img variants={mouseCursorVariant} animate="animation" className="fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2" src={cursorImg} alt="" />
+            <motion.img variants={mouseCursorVariant} animate="animation" className="  fixed lg:block hidden pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2" src={cursorImg} alt="" />
 
             {/* theme control tab */}
             <motion.div variants={ThemeControllerVariant} initial="hidden" animate={isThemeTabOpen ? "visible" : "hidden"} className="bg-themeSettingTabBg absolute right-0 top-1/4 rounded-bl-md will-change-transform">
