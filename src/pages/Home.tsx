@@ -32,12 +32,12 @@ const Home = () => {
                 <div className="space-y-10 flex flex-1  flex-col lg:items-start items-center justify-center ">
                     <h1 className="md:text-6xl text-4xl font-extrabold">MEHEDI HASAN </h1>
                     <p className=" max-w-150 text-secondaryTextColor font-medium italic lg:text-start text-center">Front-End Web Developer passionate about creating modern, responsive, and user-friendly web interfaces. Specializes in <span className="font-bold">HTML, CSS, JavaScript, and React.</span>  </p>
+                    {/* social media links */}
                     <div className="flex gap-4 text-xl">
                         <Link to={""}><FaLinkedin />   </Link>
                         <Link to={""}><FaGithub />   </Link>
                         <Link to={""}><FaFacebook />   </Link>
                         <Link to={""}> <FaInstagramSquare />   </Link>
-
                     </div>
                 </div>
 

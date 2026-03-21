@@ -3,8 +3,10 @@ import Nav from "../components/nav/Nav";
 import { IoMdSettings } from "react-icons/io";
 import { motion } from "motion/react"
 import { useState } from "react";
-import useThemeControll from "../utilities/hooks/useThemeControll";
-
+import useThemeControl from "../utilities/hooks/useThemeControl";
+import useMousePosition from "../utilities/hooks/useMousePosition";
+import cursorImg from '../assets/cursorImg/cursor.svg';
+import useIsHoverAble from "../utilities/hooks/useIsHoverAble";
 
 // variant for ThemeController animation
 const ThemeControllerVariant = {
@@ -23,27 +25,47 @@ const ThemeControllerVariant = {
 
         }
     }
-}
+};
 
 const RootLayout = () => {
 
+    const { x, y } = useMousePosition(); //custom hook that return mouse cursor position
+    const { isHoverAble } = useIsHoverAble()
+    console.log(isHoverAble)
+    //cursor animation variant
+    const mouseCursorVariant = {
+        animation: {
+            x: x ?? 0,
+            y: y ?? 0,
+            transition: {
+                type: "spring" as const,
+                stiffness: 500,
+                damping: 40
+            },
+            scale: isHoverAble ? 2 : 1
+        },
+
+    }
     const [isThemeTabOpen, setThemeTabOpen] = useState(false)
     // handle open & close state of theme controller
     function handleThemeTab() {
         setThemeTabOpen(!isThemeTabOpen)
     }
 
-    const { setLightMode, setDarkMode } = useThemeControll()
+    const { setLightMode, setDarkMode } = useThemeControl();
     return (
+
         <div className="flex   min-h-screen lg:flex-row flex-col relative overflow-x-hidden">
             <Nav></Nav>
             <main className=" lg:w-[77%] lg:px-0 px-2.5 flex-1  flex flex-col ">
                 <Outlet></Outlet>
             </main>
+            {/* cursor Svg */}
+            <motion.img variants={mouseCursorVariant} animate="animation" className="fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2" src={cursorImg} alt="" />
 
             {/* theme control tab */}
             <motion.div variants={ThemeControllerVariant} initial="hidden" animate={isThemeTabOpen ? "visible" : "hidden"} className="bg-themeSettingTabBg absolute right-0 top-1/4 rounded-bl-md will-change-transform">
-                <div className="absolute bg-themeSettingTabBg left-0 -translate-x-[90%]  h-13 w-13 flex items-center justify-center rounded-bl-md rounded-l-md">
+                <div className="fixed bg-themeSettingTabBg left-0 -translate-x-[90%]  h-13 w-13 flex items-center justify-center rounded-bl-md rounded-l-md">
                     <button onClick={handleThemeTab}><motion.div
                         initial={{ rotate: 0 }} animate={{ rotate: 180 }}
                         transition={{
