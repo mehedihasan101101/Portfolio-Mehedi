@@ -24,7 +24,7 @@ const navFields: NavFields[] = [
 const Nav = () => {
 
     return (
-        <div className="lg:w-[23%] fixed w-full z-50 lg:h-screen h-18 lg:px-0 px-2.5  flex items-center justify-center  bg-sideBarBgColor shadow-[1px_0px_0px_0px_var(--color-sideMenuShadow)] ">
+        <div className="fixed lg:w-[23%] w-full z-50 lg:h-screen h-18 lg:px-0 px-2.5  flex items-center justify-center  bg-sideBarBgColor shadow-[1px_0px_0px_0px_var(--color-sideMenuShadow)] ">
             <div className="flex lg:flex-col lg:w-auto w-full lg:items-start items-center lg:justify-normal justify-between lg:space-y-12">
                 <h1 className=" lg:text-[32px] text-primaryTextColor md:text-[25px] text-[22px]  font-extrabold">RyzerX</h1>
 
