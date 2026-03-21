@@ -35,18 +35,24 @@ const RootLayout = () => {
 
     const { setLightMode, setDarkMode } = useThemeControll()
     return (
-        <div className="flex lg:px-0 px-2.5 min-h-screen lg:flex-row flex-col relative overflow-x-hidden">
+        <div className="flex   min-h-screen lg:flex-row flex-col relative overflow-x-hidden">
             <Nav></Nav>
-            <main className=" lg:w-[77%] flex-1  flex flex-col ">
+            <main className=" lg:w-[77%] lg:px-0 px-2.5 flex-1  flex flex-col ">
                 <Outlet></Outlet>
             </main>
 
             {/* theme control tab */}
             <motion.div variants={ThemeControllerVariant} initial="hidden" animate={isThemeTabOpen ? "visible" : "hidden"} className="bg-themeSettingTabBg absolute right-0 top-1/4 rounded-bl-md will-change-transform">
                 <div className="absolute bg-themeSettingTabBg left-0 -translate-x-[90%]  h-13 w-13 flex items-center justify-center rounded-bl-md rounded-l-md">
-                    <button onClick={handleThemeTab}><IoMdSettings className=" text-sideBarBgColor text-4xl "></IoMdSettings></button>
+                    <button onClick={handleThemeTab}><motion.div
+                        initial={{ rotate: 0 }} animate={{ rotate: 180 }}
+                        transition={{
+                            repeat: Infinity, duration: 1,
+                            ease: "linear"
+                        }}
+                    ><IoMdSettings className=" text-sideBarBgColor text-4xl "></IoMdSettings></motion.div></button>
                 </div>
-                <div className="w-45 px-4  h-50 relative text-textThemeController font-bold">
+                <div className="w-45 px-4  h-50 relative text-sideBarBgColor font-bold">
                     <div>
                         <h3 className=" mt-13 "> Theme Color</h3>
 

@@ -13,6 +13,7 @@
     --color-secondaryTextColor: var(--color-secondaryTextColor);
     --color-themeSettingTabBg: var(--color-themeSettingTabBg);
     --color-textThemeController: var(--color-textThemeController);
+    --color-sideMenuShadow: var(--color-sideMenuShadow);
     --breakpoint-sm: 640px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 1200px;
@@ -25,13 +26,17 @@
     --color-secondaryTextColor: #7f7f7f;
     --color-themeSettingTabBg: #000;
     --color-textThemeController: #fff;
+    --color-sideMenuShadow: #ebebeb;
+
 }
 
 [data-theme="darkMode"] {
-    --color-bodyBgColor: #000000;
-    --color-sideBarBgColor: #fff;
-    --color-primaryTextColor: #000;
-    --color-secondaryTextColor: #7f7f7f;
-    --color-themeSettingTabBg: #000;
+    --color-bodyBgColor: #111111;
+    --color-sideBarBgColor: #000;
+    --color-primaryTextColor: #ffffff;
+    --color-secondaryTextColor: #bbb;
+    --color-themeSettingTabBg: #fff;
     --color-textThemeController: #fff;
+    --color-sideMenuShadow: #202020;
+
 }
