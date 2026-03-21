@@ -12,7 +12,10 @@
     --color-primaryTextColor: var(--color-primaryTextColor);
     --color-secondaryTextColor: var(--color-secondaryTextColor);
     --color-themeSettingTabBg: var(--color-themeSettingTabBg);
-    --color-textThemeController: var(--color-textThemeController)
+    --color-textThemeController: var(--color-textThemeController);
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1200px;
 }
 
 [data-theme="lightMode"] {

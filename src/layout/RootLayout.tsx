@@ -35,9 +35,9 @@ const RootLayout = () => {
 
     const { setLightMode, setDarkMode } = useThemeControll()
     return (
-        <div className="flex lg:flex-row flex-col relative overflow-x-hidden">
+        <div className="flex lg:px-0 px-2.5 min-h-screen lg:flex-row flex-col relative overflow-x-hidden">
             <Nav></Nav>
-            <main className=" w-[77%] lg:h-screen  ">
+            <main className=" lg:w-[77%] flex-1  flex flex-col ">
                 <Outlet></Outlet>
             </main>
 
